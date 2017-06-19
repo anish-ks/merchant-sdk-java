@@ -31,27 +31,27 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 
 	//SDK Name
 	private static final String SDK_NAME = "merchant-java-sdk";
-	
+
 	//SDK Version
-	private static final String SDK_VERSION = "2.15.121";
+	private static final String SDK_VERSION = "2.15.122";
 
 
 	/**
 	 * Default <code>PayPalAPIInterfaceServiceService</code> Constructor.
 	 * Initializes the SDK system with the default configuration file named
 	 * 'sdk_config.properties' found in the class-path
-	 * 
+	 *
 	 */
 	public PayPalAPIInterfaceServiceService() {
 		super();
 	}
-	
+
 	/**
 	 * <code>PayPalAPIInterfaceServiceService</code> that uses the supplied path
 	 * to initialize the SDK system. The initialization context is maintained
 	 * only for this instance of the class. To initialize the SDK system
 	 * globally use the default constructor.
-	 * 
+	 *
 	 * @see PayPalAPIInterfaceServiceService
 	 * @param configFilePath
 	 *            Absolute path to a {@link Properties} file
@@ -60,13 +60,13 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	public PayPalAPIInterfaceServiceService(String configFilePath) throws IOException {
 		this(new File(configFilePath));
 	}
-	
+
 	/**
 	 * <code>PayPalAPIInterfaceServiceService</code> that uses the supplied
 	 * {@link File} object to initialize the SDK system. The initialization
 	 * context is maintained only for this instance of the class. To initialize
 	 * the SDK system globally use the default constructor
-	 * 
+	 *
 	 * @see PayPalAPIInterfaceServiceService
 	 * @param configFile
 	 *            Configuration file in {@link Properties} format
@@ -74,14 +74,14 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 */
 	public PayPalAPIInterfaceServiceService(File configFile) throws IOException {
 		this(new FileInputStream(configFile));
-	}		
+	}
 
 	/**
 	 * <code>PayPalAPIInterfaceServiceService</code> that uses the supplied
 	 * {@link InputStream} object to initialize the SDK system. The
 	 * initialization context is maintained only for this instance of the class.
 	 * To initialize the SDK system globally use the default constructor.
-	 * 
+	 *
 	 * @see PayPalAPIInterfaceServiceService
 	 * @param inputStream
 	 *            InputStream of a {@link Properties} file
@@ -98,15 +98,15 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 * bundled with the SDK. The initialization context is maintained only for
 	 * this instance of the class. To initialize the SDK system globally use the
 	 * default constructor.
-	 * 
+	 *
 	 * @see PayPalAPIInterfaceServiceService
 	 * @param properties
 	 *            {@link Properties} object
-	 */	
+	 */
 	public PayPalAPIInterfaceServiceService(Properties properties) {
 		super(properties);
 	}
-	
+
 	/**
 	 * <code>PayPalAPIInterfaceServiceService</code> that uses the supplied
 	 * {@link Map} to initialize the SDK system. For values that the map should
@@ -114,7 +114,7 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 * SDK. The initialization context is maintained only for this instance of
 	 * the class. To initialize the SDK system globally use the default
 	 * constructor.
-	 * 
+	 *
 	 * @see PayPalAPIInterfaceServiceService
 	 * @param configurationMap
 	 *            {@link Map} object
@@ -134,8 +134,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	}
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -151,8 +151,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return refundTransaction(refundTransactionReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -178,9 +178,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -207,8 +207,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -224,8 +224,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return initiateRecoup(initiateRecoupReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -251,9 +251,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -280,8 +280,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -297,8 +297,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return completeRecoup(completeRecoupReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -324,9 +324,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -353,8 +353,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -370,8 +370,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return cancelRecoup(cancelRecoupReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -397,9 +397,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -426,8 +426,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -443,8 +443,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return getTransactionDetails(getTransactionDetailsReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -470,9 +470,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -499,8 +499,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -516,8 +516,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return billUser(billUserReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -543,9 +543,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -572,8 +572,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -589,8 +589,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return transactionSearch(transactionSearchReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -616,9 +616,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -645,8 +645,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -662,8 +662,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return massPay(massPayReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -689,9 +689,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -718,8 +718,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -735,8 +735,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return billAgreementUpdate(billAgreementUpdateReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -762,9 +762,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -791,8 +791,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -808,8 +808,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return addressVerify(addressVerifyReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -835,9 +835,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -864,8 +864,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -881,8 +881,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return enterBoarding(enterBoardingReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -908,9 +908,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -937,8 +937,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -954,8 +954,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return getBoardingDetails(getBoardingDetailsReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -981,9 +981,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1010,8 +1010,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1027,8 +1027,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return createMobilePayment(createMobilePaymentReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1054,9 +1054,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1083,8 +1083,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1100,8 +1100,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return getMobileStatus(getMobileStatusReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1127,9 +1127,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1156,8 +1156,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1173,8 +1173,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return setMobileCheckout(setMobileCheckoutReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1200,9 +1200,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1229,8 +1229,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1246,8 +1246,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return doMobileCheckoutPayment(doMobileCheckoutPaymentReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1273,9 +1273,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1302,8 +1302,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1319,8 +1319,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return getBalance(getBalanceReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1346,9 +1346,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1375,8 +1375,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1392,8 +1392,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return getPalDetails(getPalDetailsReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1419,9 +1419,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1448,8 +1448,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1465,8 +1465,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return doExpressCheckoutPayment(doExpressCheckoutPaymentReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1492,9 +1492,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1521,8 +1521,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1538,8 +1538,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return doUATPExpressCheckoutPayment(doUATPExpressCheckoutPaymentReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1565,9 +1565,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1594,8 +1594,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1611,8 +1611,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return setAuthFlowParam(setAuthFlowParamReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1638,9 +1638,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1667,8 +1667,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1684,8 +1684,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return getAuthDetails(getAuthDetailsReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1711,9 +1711,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1740,8 +1740,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1757,8 +1757,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return setAccessPermissions(setAccessPermissionsReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1784,9 +1784,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1813,8 +1813,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1830,8 +1830,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return updateAccessPermissions(updateAccessPermissionsReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1857,9 +1857,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1886,8 +1886,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1903,8 +1903,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return getAccessPermissionDetails(getAccessPermissionDetailsReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1930,9 +1930,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1959,8 +1959,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -1976,8 +1976,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return getIncentiveEvaluation(getIncentiveEvaluationReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2003,9 +2003,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2032,8 +2032,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2049,8 +2049,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return setExpressCheckout(setExpressCheckoutReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2076,9 +2076,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2105,8 +2105,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2122,8 +2122,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return executeCheckoutOperations(executeCheckoutOperationsReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2149,9 +2149,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2178,8 +2178,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2195,8 +2195,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return getExpressCheckoutDetails(getExpressCheckoutDetailsReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2222,9 +2222,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2251,8 +2251,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2268,8 +2268,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return doDirectPayment(doDirectPaymentReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2295,9 +2295,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2324,8 +2324,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2341,8 +2341,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return managePendingTransactionStatus(managePendingTransactionStatusReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2368,9 +2368,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2397,8 +2397,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2414,8 +2414,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return doCancel(doCancelReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2441,9 +2441,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2470,8 +2470,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2487,8 +2487,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return doCapture(doCaptureReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2514,9 +2514,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2543,8 +2543,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2560,8 +2560,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return doReauthorization(doReauthorizationReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2587,9 +2587,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2616,8 +2616,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2633,8 +2633,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return doVoid(doVoidReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2660,9 +2660,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2689,8 +2689,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2706,8 +2706,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return doAuthorization(doAuthorizationReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2733,9 +2733,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2762,8 +2762,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2779,8 +2779,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return updateAuthorization(updateAuthorizationReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2806,9 +2806,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2835,8 +2835,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2852,8 +2852,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return setCustomerBillingAgreement(setCustomerBillingAgreementReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2879,9 +2879,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2908,8 +2908,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2925,8 +2925,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return getBillingAgreementCustomerDetails(getBillingAgreementCustomerDetailsReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2952,9 +2952,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2981,8 +2981,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -2998,8 +2998,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return createBillingAgreement(createBillingAgreementReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -3025,9 +3025,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -3054,8 +3054,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -3071,8 +3071,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return doReferenceTransaction(doReferenceTransactionReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -3098,9 +3098,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -3127,8 +3127,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -3144,8 +3144,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return doNonReferencedCredit(doNonReferencedCreditReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -3171,9 +3171,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -3200,8 +3200,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -3217,8 +3217,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return doUATPAuthorization(doUATPAuthorizationReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -3244,9 +3244,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -3273,8 +3273,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -3290,8 +3290,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return createRecurringPaymentsProfile(createRecurringPaymentsProfileReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -3317,9 +3317,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -3346,8 +3346,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -3363,8 +3363,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return getRecurringPaymentsProfileDetails(getRecurringPaymentsProfileDetailsReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -3390,9 +3390,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -3419,8 +3419,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -3436,8 +3436,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return manageRecurringPaymentsProfileStatus(manageRecurringPaymentsProfileStatusReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -3463,9 +3463,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -3492,8 +3492,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -3509,8 +3509,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return billOutstandingAmount(billOutstandingAmountReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -3536,9 +3536,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -3565,8 +3565,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -3582,8 +3582,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return updateRecurringPaymentsProfile(updateRecurringPaymentsProfileReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -3609,9 +3609,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -3638,8 +3638,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -3655,8 +3655,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return reverseTransaction(reverseTransactionReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -3682,9 +3682,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -3711,8 +3711,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 		}
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -3728,8 +3728,8 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 	 	return externalRememberMeOptOut(externalRememberMeOptOutReq, (String) null);
 	 }
 
-	/** 
-	 * 
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException
@@ -3755,9 +3755,9 @@ public class PayPalAPIInterfaceServiceService extends BaseService {
 			throw new RuntimeException("Unable to parse response", exe);
 		}
 	}
-	
-	/**	
-	 * 
+
+	/**
+	 *
 	 * @throws SSLConfigurationException
 	 * @throws InvalidCredentialException
 	 * @throws UnsupportedEncodingException

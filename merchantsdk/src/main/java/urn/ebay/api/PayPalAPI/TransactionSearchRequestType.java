@@ -36,6 +36,12 @@ public class TransactionSearchRequestType extends AbstractRequestType {
 	private String payer;
 
 	/**
+	 * Search by the buyer's email address.
+	 * Optional
+	 */
+	private String email;
+
+	/**
 	 * Search by the receiver's email address. If the merchant
 	 * account has only one email, this is the primary email. Can
 	 * also be a non-primary email.Optional	 
@@ -205,7 +211,21 @@ public class TransactionSearchRequestType extends AbstractRequestType {
 	 public void setPayer(String payer) {
 	 	this.payer = payer;
 	 }
-	 
+
+	/**
+	 * Getter for email
+	 */
+	 public String getEmail() {
+	 	return email;
+	 }
+
+	/**
+	 * Setter for email
+	 */
+	 public void setEmail(String email) {
+	 	this.email = email;
+	 }
+
 	/**
 	 * Getter for receiver
 	 */
@@ -402,6 +422,10 @@ public class TransactionSearchRequestType extends AbstractRequestType {
 		if(receiver != null) {
 			sb.append("<").append(preferredPrefix).append(":Receiver>").append(SDKUtil.escapeInvalidXmlCharsRegex(this.receiver));
 			sb.append("</").append(preferredPrefix).append(":Receiver>");
+		}
+		if(email != null) {
+			sb.append("<").append(preferredPrefix).append(":Email>").append(SDKUtil.escapeInvalidXmlCharsRegex(this.email));
+			sb.append("</").append(preferredPrefix).append(":Email>");
 		}
 		if(receiptID != null) {
 			sb.append("<").append(preferredPrefix).append(":ReceiptID>").append(SDKUtil.escapeInvalidXmlCharsRegex(this.receiptID));
